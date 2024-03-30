@@ -78,6 +78,9 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
 }
 ````
 
+- $\color{red}{DELETE}$ deleteProduct:-
+
+> https://ecommerce-api-314i.onrender.com/api/v1/product/:productId 
 
 
 
