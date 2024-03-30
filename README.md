@@ -63,9 +63,9 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
 
 > https://ecommerce-api-314i.onrender.com/api/v1/product
 
-- $\color{blue}{POST}$ createProduct:-
+- $\color{blue}{POST}$ updateProduct:-
 
-> https://ecommerce-api-314i.onrender.com/api/v1/product
+> https://ecommerce-api-314i.onrender.com/api/v1/product/:productId 
 
 ##### Body raw(json)
 
@@ -73,10 +73,8 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
 {
     "title": "Dell",
     "description": "this is best dell core i5 pc for coding",
-    "price": 45000,
-    "stock": 4,
-    "brand": "dell",
-    "category": "laptop"
+    "price": 55000,
+    "stock": 3,
 }
 ````
 
