@@ -1,6 +1,9 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userModel = require("../Model/user");
+const dotenv = require('dotenv'); 
+
+dotenv.config();
 
 const userRegister = async (req, res) => {
   //  console.log(req.body);
@@ -111,7 +114,7 @@ const userLogin = async (req, res) => {
     });
   } else {
     res.json({
-      success: true,
+      success: false,
       message: "Incorrect password",
     });
   }
