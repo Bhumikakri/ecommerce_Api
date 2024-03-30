@@ -5,8 +5,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET,
+  key_id: "rzp_test_sTbbNFmqYna9eg",
+  key_secret: "lxmuzXn80nY1TxMRbIQIiL3Z",
 });
 
 const orderModel = require("../Model/order");

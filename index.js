@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require('dotenv'); 
+// const dotenv = require('dotenv'); 
 
 const userRoutesApi = require("./Routes/user");
 const productRoutesApi = require("./Routes/product");
@@ -11,13 +11,13 @@ const brandRouterApi = require("./Routes/brand");
 const blogRouterApi = require("./Routes/blog");
 const authmiddleware = require("./middleware/Auth");
 
-dotenv.config()
+// dotenv.config()
 
 const app = express();
 
 
 
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect("mongodb+srv://bhumi:bhumi@cluster0.hqwqfux.mongodb.net/")
 .then(()=>console.log("db connected succesfully"))
 .catch((err)=>console.error(err));
 
@@ -34,6 +34,6 @@ app.use("/api/v1/blog", blogRouterApi)
 app.use("/api/v1/brand", brandRouterApi)
 app.use("/api/v1/order",authmiddleware(["buyer"]), orderRouterApi);
 
-app.listen(process.env.PORT, ()=>{
-    console.log(`Server is running up on ${process.env.PORT}`);
+app.listen(10000, ()=>{
+    console.log(`Server is running up on 10000`);
 })

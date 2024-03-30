@@ -3,7 +3,7 @@ const userModel = require("../Model/user");
 
 const authmiddleware = (role) => async (req, res, next) => {
   try {
-    const data = jwt.verify(req.headers.authorization, process.env.JWT_KEY);
+    const data = jwt.verify(req.headers.authorization, "AJSJF9837FK30R6FU4");
 
     console.log(data)
     // const tokenfromheader = req.headers.authorization.split(" ")[1];
