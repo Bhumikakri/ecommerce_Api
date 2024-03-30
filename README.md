@@ -3,9 +3,9 @@
 This is eCommerce Backend API documentation.It allows you to manage user registration, login, logout , products, orders, and customers .
 
 ## Endpoints for Authentication
+### Method:- $\color{blue}{POST}$
 
-- $\color{blue}{POST}$ register:-
-
+#### register URL:-
 > https://ecommerce-api-314i.onrender.com/api/v1/user/register
 
 ##### Body raw(json)
@@ -20,8 +20,9 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
 }
 ````
 
-- $\color{blue}{POST}$ Login:-
+### Method:- $\color{blue}{POST}$ 
 
+#### Login URL:-
 > https://ecommerce-api-314i.onrender.com/api/v1/user/login
 
 ##### Body raw(json)
@@ -32,7 +33,8 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
     "password":"12345678"
 }
 ````
-- $\color{blue}{POST}$ Logout:-
+### Method:- $\color{blue}{POST}$
+#### Logout URL:-
 
 > https://ecommerce-api-314i.onrender.com/api/v1/user/logout
 
@@ -43,7 +45,8 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
 
 ## Endpoints of Products for admin, seller and also user
 
-- $\color{blue}{POST}$ createProduct:-
+### Method:- $\color{blue}{POST}$ 
+#### createProduct URL:-
 
 > https://ecommerce-api-314i.onrender.com/api/v1/product
 
@@ -59,11 +62,13 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
     "category": "laptop"
 }
 ````
-- $\color{green}{GET}$ getAllProduct:-
+### Method:- $\color{green}{GET}$ 
+#### getAllProduct URL:-
 
 > https://ecommerce-api-314i.onrender.com/api/v1/product
 
-- $\color{blue}{POST}$ updateProduct:-
+### Method:- $\color{blue}{POST}$ 
+#### updateProduct URL:-
 
 > https://ecommerce-api-314i.onrender.com/api/v1/product/:productId 
 
@@ -78,7 +83,8 @@ This is eCommerce Backend API documentation.It allows you to manage user registr
 }
 ````
 
-- $\color{red}{DELETE}$ deleteProduct:-
+### Method:- $\color{red}{DELETE}$ 
+#### deleteProduct URL:-
 
 > https://ecommerce-api-314i.onrender.com/api/v1/product/:productId 
 
