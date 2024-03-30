@@ -99,13 +99,11 @@ const userLogin = async (req, res) => {
       role: user.role,
       exp: expiryDate,
     };
-    const token = jwt.sign(payload, "AJSJF9837FK30R6FU4");
+    const token = jwt.sign(payload, process.env.JWT_KEY);
 
 
-    // if (!user.token || Date.now() >= payload.exp * 1000) {
       const updateToken = token;
       await userModel.findByIdAndUpdate(user._id, {$set: {token: updateToken} } );
-    // }
 
     res.json({
       success: true,
