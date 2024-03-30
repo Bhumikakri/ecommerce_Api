@@ -82,7 +82,7 @@ const userLogin = async (req, res) => {
 
   //   console.log(user.password);
   if (user.token) {
-    // jwt.verify()
+    await userModel.findByIdAndUpdate(user._id, {$set: {token: null} } );
     return res.status(400).json({
       success: false,
       message: "You are already logged in",
