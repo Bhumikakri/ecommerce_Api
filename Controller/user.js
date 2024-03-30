@@ -125,13 +125,12 @@ const userLogout = async (req, res) => {
     const user = await userModel.findOne({ token: req.headers.authorization });
 
     if (user) {
-      user.token = null;
-      await user.save();
+      await userModel.findByIdAndUpdate(user._id, {$set: {token: null} } );
+      res.json({
+        success: true,
+        message: "LogOut successfully",
+      });
     }
-    res.json({
-      success: true,
-      message: "LogOut successfully",
-    });
   } catch (err) {
     res.status(500).json({
       success: false,
